@@ -20,3 +20,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Step Two
         run: "Get-ChildItem Env: | Sort-Object Name"
+      - name: AWS Sustainability Scanner GitHub Action
+        uses: aws-actions/sustainability-scanner@v1
+        with:
+          # File path of the CloudFormation template to be scanned
+          file: # optional
+          # Directory path with CloudFormation files to be scanned
+          directory: # optional, default is .
+          # CDK stack name to be scanned
+          stack_name: # optional
+          # File path to extend set of rules
+          rules_file: # optional
+                
+
